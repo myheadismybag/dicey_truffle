@@ -130,7 +130,8 @@
     },
     {
       "stateMutability": "payable",
-      "type": "fallback"
+      "type": "fallback",
+      "payable": true
     },
     {
       "inputs": [],
@@ -143,7 +144,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -156,7 +158,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -198,14 +201,16 @@
     },
     {
       "stateMutability": "payable",
-      "type": "receive"
+      "type": "receive",
+      "payable": true
     },
     {
       "inputs": [],
       "name": "refundTokens",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [],
@@ -245,7 +250,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -397,7 +403,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -416,7 +423,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -429,7 +437,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -442,7 +451,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -508,7 +518,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -521,7 +532,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -534,7 +546,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_vrfCoordinator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_link\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"_keyHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"_fee\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"requestId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"roller\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint8[]\",\"name\":\"rolledvalues\",\"type\":\"uint8[]\"},{\"indexed\":false,\"internalType\":\"int8\",\"name\":\"adjustment\",\"type\":\"int8\"},{\"indexed\":false,\"internalType\":\"int16\",\"name\":\"result\",\"type\":\"int16\"}],\"name\":\"DiceLanded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"requestId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"roller\",\"type\":\"address\"}],\"name\":\"DiceRolled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"getAllUsers\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAllUsersCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getLINKBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_roller\",\"type\":\"address\"}],\"name\":\"getRoller\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"rollee\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"randomness\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"numberOfDie\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"dieSize\",\"type\":\"uint8\"},{\"internalType\":\"int8\",\"name\":\"adjustment\",\"type\":\"int8\"},{\"internalType\":\"int16\",\"name\":\"result\",\"type\":\"int16\"},{\"internalType\":\"bool\",\"name\":\"hasRolled\",\"type\":\"bool\"},{\"internalType\":\"uint8[]\",\"name\":\"rolledValues\",\"type\":\"uint8[]\"}],\"internalType\":\"struct DiceRoller.DiceRollee\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"getUserRolls\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"rollee\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"randomness\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"numberOfDie\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"dieSize\",\"type\":\"uint8\"},{\"internalType\":\"int8\",\"name\":\"adjustment\",\"type\":\"int8\"},{\"internalType\":\"int16\",\"name\":\"result\",\"type\":\"int16\"},{\"internalType\":\"bool\",\"name\":\"hasRolled\",\"type\":\"bool\"},{\"internalType\":\"uint8[]\",\"name\":\"rolledValues\",\"type\":\"uint8[]\"}],\"internalType\":\"struct DiceRoller.DiceRollee[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"getUserRollsCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_numberOfDie\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"_dieSize\",\"type\":\"uint8\"},{\"internalType\":\"int8\",\"name\":\"_adjustment\",\"type\":\"int8\"},{\"internalType\":\"int8\",\"name\":\"_result\",\"type\":\"int8\"}],\"name\":\"hasRolled\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_member\",\"type\":\"address\"}],\"name\":\"hasRolledOnce\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"isIndeed\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"kill\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"requestId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"randomness\",\"type\":\"uint256\"}],\"name\":\"rawFulfillRandomness\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"refundTokens\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_numberOfDie\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"_dieSize\",\"type\":\"uint8\"},{\"internalType\":\"int8\",\"name\":\"_adjustment\",\"type\":\"int8\"}],\"name\":\"rollDice\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"requestId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_numberOfDie\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"_dieSize\",\"type\":\"uint8\"},{\"internalType\":\"int8\",\"name\":\"_adjustment\",\"type\":\"int8\"}],\"name\":\"rollDiceFast\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"requestId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"hasRolled(uint8,uint8,int8,int8)\":{\"params\":{\"_adjustment\":\"the modifier to add after all die have been rolled. Can be negative.\",\"_dieSize\":\"the type of die rolled (4 = 4 sided, 6 = six sided, etc.)\",\"_numberOfDie\":\"how many dice are rolled\",\"_result\":\"can be negative if you have a low enough dice roll and larger negative adjustment. Example, rolled 2 4 sided die with -4 adjustment.\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"pause()\":{\"details\":\"Triggers stopped state. Requirements: - The contract must not be paused.\"},\"paused()\":{\"details\":\"Returns true if the contract is paused, and false otherwise.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"rollDice(uint8,uint8,int8)\":{\"params\":{\"_adjustment\":\"the modifier to add after all die have been rolled. Can be negative.\",\"_dieSize\":\"the type of die rolled (4 = 4 sided, 6 = six sided, etc.)\",\"_numberOfDie\":\"how many dice are rolled\"}},\"rollDiceFast(uint8,uint8,int8)\":{\"params\":{\"_adjustment\":\"the modifier to add after all die have been rolled. Can be negative.\",\"_dieSize\":\"the type of die rolled (4 = 4 sided, 6 = six sided, etc.)\",\"_numberOfDie\":\"how many dice are rolled\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"},\"unpause()\":{\"details\":\"Returns to normal state. Requirements: - The contract must be paused.\"}},\"version\":1},\"userdoc\":{\"events\":{\"DiceLanded(bytes32,address,uint8[],int8,int16)\":{\"notice\":\"Emitted when fulfillRandomness is called by Chainlink VRF to provide the random value.\"},\"DiceRolled(bytes32,address)\":{\"notice\":\"Emit this when either of the rollDice functions are called. Used to notify soem front end that we are waiting for response from chainlink VRF.\"}},\"kind\":\"user\",\"methods\":{\"getAllUsers()\":{\"notice\":\"only allow the contract owner (me) to access this.\"},\"getUserRolls(address)\":{\"notice\":\"returns historic data for specific address/user\"},\"getUserRollsCount(address)\":{\"notice\":\"How many times someone rolled.\"},\"hasRolled(uint8,uint8,int8,int8)\":{\"notice\":\"Called by the front end if user wants to use the front end to  generate the random values. We just use this to store the result of the roll on the blockchain.\"},\"hasRolledOnce(address)\":{\"notice\":\"Used to perform specific logic based on if user has rolled previoulsy or not.\"},\"kill()\":{\"notice\":\"When the contract is killed, make sure to return all unspent tokens back to my wallet.\"},\"rollDice(uint8,uint8,int8)\":{\"notice\":\"Requests randomness from Chainlink.\"},\"rollDiceFast(uint8,uint8,int8)\":{\"notice\":\"Uses psuedo randomness based on blockchain data. This function is used to  compare speed of getting some sort of randomness straight from the blockchain  instead of waiting for Chainlink VRF to return a random value.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/DiceRoller.sol\":\"DiceRoller\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@chainlink/contracts/src/v0.8/VRFConsumerBase.sol\":{\"keccak256\":\"0x778c9d88cd6d94ae866c1c3f5fec6022f07e39280d3b6d581c8cceb8a5ac4b1e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a2fe7cac98f6c86e4e3ef299bb91f3917d4171548e39da72c7da392c9d5d5815\",\"dweb:/ipfs/QmT8jh2DR1VU8554hGMbjX6BkACT96FZBETbN5KkStBvYP\"]},\"@chainlink/contracts/src/v0.8/VRFRequestIDBase.sol\":{\"keccak256\":\"0x2bf1168e8fe548fa990e0aeaf89ef90680f80aa31eeaf901f485df60de51d51b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://79c72d66deaa4b0f251f3f0817f45ebceb71f5b4f94a86ac0e586de99f5af2b6\",\"dweb:/ipfs/QmcHkApHm5CAynjajcCUYppaKJ9sNWGZTEcSs4tUK8B5K5\"]},\"@chainlink/contracts/src/v0.8/interfaces/LinkTokenInterface.sol\":{\"keccak256\":\"0xc7d7cd730d36825485ef4107d93c3ff18b9f3a5a00ea3d5988ba9a0bd70b10c5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8cb1064885ecbcd9c3adba779e190cb4a538e5d4d15aeccb67d3376bdffc94bd\",\"dweb:/ipfs/QmcQHK6ewve7tFi4XXK65JthQg4kQzApQikWcURJjGt4iQ\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x24e0364e503a9bbde94c715d26573a76f14cd2a202d45f96f52134ab806b67b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e12cbaa7378fd9b62280e4e1d164bedcb4399ce238f5f98fc0eefb7e50577981\",\"dweb:/ipfs/QmXRoFGUgfsaRkoPT5bxNMtSayKTQ8GZATLPXf69HcRA51\"]},\"@openzeppelin/contracts/security/Pausable.sol\":{\"keccak256\":\"0xe68ed7fb8766ed1e888291f881e36b616037f852b37d96877045319ad298ba87\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1d491a2ca79dbf44bc02e876e21a5847a2cbcc011188532ad8662cdc1c134a4e\",\"dweb:/ipfs/QmUQXhSV8ZvHLzfdG89ZNSh1nLrAYyjnNBLznJGwGcwVk8\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"project:/contracts/DiceRoller.sol\":{\"keccak256\":\"0x1fe6449e5749af4154bc73cb7c5f24609ba57b75f9c39376c7b0b3a880c8f480\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e9243bcc495f455b92d450042f55f7cbf7722abf88845c84e1ae7129e9189eca\",\"dweb:/ipfs/QmSvY8JxmY7B6WvUGAKB9v4PNmcamrtNtFaab8Hk5CbXf3\"]}},\"version\":1}",
@@ -49325,6 +49338,12 @@
     "version": "0.8.4+commit.c7e474f2.Emscripten.clang"
   },
   "networks": {
+    "42": {
+      "events": {},
+      "links": {},
+      "address": "0x38c49E05c129025Ab1B0881A0302C65a7Cb051B9",
+      "transactionHash": "0x2babd1c83a83708a9c2deb9c4947b4ba4bd8f7b57c33eaedc7c9cbce638faedd"
+    },
     "5777": {
       "events": {
         "0x130cc744f2cd80f18760d822f93daf2d306dd3d8853c48bf56e89e1d36467546": {
@@ -49409,7 +49428,8 @@
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-03T04:03:29.374Z",
+  "updatedAt": "2022-01-03T04:58:30.541Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {
